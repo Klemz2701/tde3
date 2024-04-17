@@ -99,6 +99,9 @@ with open('/home/bruno/Downloads/qst_2_grafo_info.txt', 'w') as info_file:
         info_file.write(f'{node}: {degree}\n')
 
 #item 4
-can_reach, visited_nodes = grafo.bfs_path('martin.cuilla@enron.com', 'phil2dogs@aol.com')
-print("Pode alcançar:", can_reach)
-print("Vértices visitados:", visited_nodes)
+can_reach, visited_nodes = grafo.bfs_path('pilar.ramirez@enron.com', 'theresa.branney@enron.com')
+with open('/home/bruno/Downloads/bfs_results.txt', 'w') as file:
+    file.write(f"Pode alcançar?: {can_reach}\n")
+    file.write("Vertices visitados:\n")
+    for node in visited_nodes:
+        file.write(f"{node}\n")
