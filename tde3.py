@@ -55,7 +55,7 @@ class Grafo:
 
         return False, visitados[1:]
     
-    def eh_euleriano(self):
+    def euleriano(self):
         cont = 0
         verts_impares = []
         for node, arestas in self.verts.items():
@@ -185,7 +185,7 @@ with open('/home/bruno/Downloads/qst_2_grafo_info.txt', 'w') as arquivo:
     print("item 2 salvo em txt")
 
 #item3
-euleriano, msg_euleriano = grafo.eh_euleriano()
+euleriano, msg_euleriano = grafo.euleriano()
 with open('/home/bruno/Downloads/qst_3_euleriano.txt', 'w') as arquivo:
     arquivo.write("Verificação para saber se o grafo é Euleriano:\n")
     arquivo.write(f"Conforme solicitado, retornando TRUE ou FALSE, o grafo é Euleriano? {euleriano}\n")
