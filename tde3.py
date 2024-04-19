@@ -203,11 +203,11 @@ with open('/home/bruno/Downloads/qst_4_bfs.txt', 'w') as arquivo:
 
 #item 5        
 with open('/home/bruno/Downloads/qst5_dijkstra.txt', 'w') as arquivo:
-    # Teste com uma distância máxima
+    # Teste com uma distancia maxima
     """dists = grafo.dijkstra('martin.cuilla@enron.com', dist_max=3, tipo_ret='dists')
     arquivo.write("Vertices dentro da distância 1: " + str(dists) + "\n\n")"""
 
-    # Teste para um caminho específico entre nós
+    # Teste para um caminho entre nós com comeco e fim
     caminho, distancia = grafo.dijkstra('martin.cuilla@enron.com', 'william.kasemervisz@enron.com', tipo_ret='caminho')
     arquivo.write("Caminho até o nó específico: " + str(caminho) + "\n")
     arquivo.write("Distância até o nó específico: " + str(distancia) + "\n")
